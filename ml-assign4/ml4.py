@@ -37,6 +37,7 @@ class_centroids = calculate_class_centroids(grouped_data)
 class_standard_deviations = calculate_class_standard_deviations(grouped_data)
 
 
+# Plot histogram for '100g_USD'
 plt.hist(df['100g_USD'], bins=5, edgecolor='black', alpha=0.7)
 plt.xlabel('Price per 100g USD')
 plt.ylabel('Frequency')
@@ -90,7 +91,4 @@ for k in ks:
 plt.figure(figsize=(10, 5))
 plt.plot(ks, accuracies, marker='o', linestyle='-', color='red')
 plt.xlabel('Number of Neighbors k')
-plt.ylabel('Accuracy')
-plt.title('Accuracy Trend for k-NN Classifier with varying k')
-plt.grid(True)
-plt.show()
+
